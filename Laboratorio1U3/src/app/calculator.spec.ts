@@ -1,48 +1,65 @@
-import { TestBed } from '@angular/core/testing';
 import { Calculator } from './calculator';
 
-
-
+//primer caso de prueba para la funcion multiplicar
 describe('Test for Calculator', () => {
-  //Arrange
-  let calculator: any;
-  beforeEach(() => {
-    calculator = new Calculator();
+  let calculator:any;
+  beforeEach(()=>{
+    let calculator = new Calculator();
+
   });
-
-
-
     describe('Test for multiply', () => {
       it('should return nine', () => {
-        // Arrange
-
-        //Act
-        //Assert
+        // Arrangea
+        let calculator = new Calculator();
         expect(calculator.multiply(3, 3)).toEqual(9);
       });
 
-      it('should return four', () => {
+      it('should return nine', () => {
         // Arrange
-
-        //Act
-        //Assert
+        let calculator = new Calculator();
         expect(calculator.multiply(2, 2)).toEqual(4);
       });
-      it('should return five', () => {
-        // Arrange
 
-        //Act
-        //Assert
-        expect(calculator.divide(25, 5)).toEqual(5);
+      it('should return nine', () => {
+        // Arrange
+        let calculator = new Calculator();
+        expect(calculator.divide(20, 5)).toEqual(4);
       });
 
-      it('should return zero', () => {
+      it('should return nine', () => {
         // Arrange
-
+        let calculator = new Calculator();
         //Act
         //Assert
-        expect(calculator.divide(81, 0)).toBeNull;
+        // expect(result).toEqual(4);
+        expect(calculator.divide(20, 0)).toBeNull;
+
       });
+
+      //refactorizar la variable result
+
+      //d. Probar los matcher de Jasmine (se puede ver en su página oficial)
+      describe('Jasmine Matchers', () => {
+        fit('test Matchers', () => {
+         let name = 'Dayana';
+         let name1;
+
+         expect(name).toBeDefined();
+         expect(name1).toBeUndefined();
+
+         expect(1+2== 3).toBeTruthy();
+         expect(1+1== 3).toBeFalsy();
+
+         expect(5).toBeLessThan(10);
+         expect(20).toBeGreaterThan(10);
+
+         expect('1234567').toMatch(/123/);
+
+         expect(["apples", "oranges", "pears"]).toContain("oranges")
+
+        });
+      });
+
     });
 
 });
