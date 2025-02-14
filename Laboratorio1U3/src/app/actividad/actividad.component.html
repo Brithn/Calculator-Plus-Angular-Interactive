@@ -1,0 +1,6 @@
+<h1>{{ titulo }}</h1>
+<button (click)="iniciarActividad()">Iniciar</button>
+<ul>
+  <li *ngFor="let actividad of actividades">{{ actividad }}</li>
+</ul>
+<p *ngIf="actividadSeleccionada">Actividad seleccionada: {{ actividadSeleccionada }}</p>
