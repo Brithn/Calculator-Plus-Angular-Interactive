@@ -40,7 +40,7 @@ describe('Test for Calculator', () => {
 
       //d. Probar los matcher de Jasmine (se puede ver en su página oficial)
       describe('Jasmine Matchers', () => {
-        fit('test Matchers', () => {
+        it('test Matchers', () => {
          let name = 'Dayana';
          let name1;
 
