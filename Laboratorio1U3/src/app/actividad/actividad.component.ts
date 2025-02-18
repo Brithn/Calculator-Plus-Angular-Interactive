@@ -14,6 +14,7 @@ export class ActividadComponent {
   actividadSeleccionada: string | null = null;
 
   iniciarActividad(): void {
-    this.actividadSeleccionada = this.actividades[Math.floor(Math.random() * this.actividades.length)];
+    this.actividadSeleccionada = this.actividades[Math.floor(Math.random()
+      * this.actividades.length)];
   }
 }

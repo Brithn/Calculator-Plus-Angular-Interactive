@@ -18,13 +18,11 @@ export class PracticaComponent {
   //   const numero = Math.floor(Math.random() * 10) + 1;
   //   return numero % 2 === 0;
   // }
-  textoInput: string = '';
-  numeroInput: number = 0;
-  textoArea: string = '';
 
-  // Función para generar un número aleatorio del 1 al 6
-  dado(): boolean {
-    const numero = Math.floor(Math.random() * 6) + 1;
-    return numero % 2 !== 0; // Retorna true si es impar, false si es par
-  }
+  // Ejercicio 2
+  // // Función para generar un número aleatorio del 1 al 6
+  // dado(): boolean {
+  //   const numero = Math.floor(Math.random() * 6) + 1;
+  //   return numero % 2 !== 0; // Retorna true si es impar, false si es par
+  // }
 }

@@ -84,58 +84,60 @@
 //   });
 // });
 
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { PracticaComponent } from './practica.component';
-import { FormsModule } from '@angular/forms';
+// ejercicio 2
 
-describe('PracticaComponent', () => {
-  let component: PracticaComponent;
-  let fixture: ComponentFixture<PracticaComponent>;
+// import { ComponentFixture, TestBed } from '@angular/core/testing';
+// import { PracticaComponent } from './practica.component';
+// import { FormsModule } from '@angular/forms';
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [PracticaComponent, FormsModule] // Importar FormsModule
-    }).compileComponents();
+// describe('PracticaComponent', () => {
+//   let component: PracticaComponent;
+//   let fixture: ComponentFixture<PracticaComponent>;
 
-    fixture = TestBed.createComponent(PracticaComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+//   beforeEach(async () => {
+//     await TestBed.configureTestingModule({
+//       imports: [PracticaComponent, FormsModule] // Importar FormsModule
+//     }).compileComponents();
 
-  // 1️ Evaluar si el h1 dentro de una clase "destacado" contiene "EUR-ACE"
-  it('debería contener "EUR-ACE" en el h1 dentro de la clase destacado', () => {
-    const destacadoElement = fixture.nativeElement.querySelector('.destacado h1 span');
-    expect(destacadoElement.textContent).toEqual('EUR-ACE');
-  });
+//     fixture = TestBed.createComponent(PracticaComponent);
+//     component = fixture.componentInstance;
+//     fixture.detectChanges();
+//   });
 
-  // 2️ Evaluar si el valor de input de tipo number es >= 5
-  it('debería tener un valor mayor o igual a 5 en el input de número', () => {
-    component.numeroInput = 5;
-    fixture.detectChanges();
-    const inputElement = fixture.nativeElement.querySelector('input[type="number"]');
-    expect(Number(inputElement.value)).toBeGreaterThanOrEqual(5);
-  });
+//   // 1️ Evaluar si el h1 dentro de una clase "destacado" contiene "EUR-ACE"
+//   it('debería contener "EUR-ACE" en el h1 dentro de la clase destacado', () => {
+//     const destacadoElement = fixture.nativeElement.querySelector('.destacado h1 span');
+//     expect(destacadoElement.textContent).toEqual('EUR-ACE');
+//   });
 
-  // 3️ Evaluar si el textarea contiene la frase "Resultado de aprendizaje"
-  it('debería coincidir con la frase "Resultado de aprendizaje" en el textarea', () => {
-    component.textoArea = 'Este es el Resultado de aprendizaje esperado';
-    fixture.detectChanges();
-    const textareaElement = fixture.nativeElement.querySelector('textarea');
-    expect(textareaElement.value).toMatch(/Resultado de aprendizaje/);
-  });
+//   // 2️ Evaluar si el valor de input de tipo number es >= 5
+//   it('debería tener un valor mayor o igual a 5 en el input de número', () => {
+//     component.numeroInput = 5;
+//     fixture.detectChanges();
+//     const inputElement = fixture.nativeElement.querySelector('input[type="number"]');
+//     expect(Number(inputElement.value)).toBeGreaterThanOrEqual(5);
+//   });
 
-  // 4️ Evaluar si la función "dado()" retorna true cuando genera un número impar
-  it('debería retornar true si el número es impar', () => {
-    spyOn(Math, 'random').and.returnValue(0.3); // Simula un 1 (impar)
-    expect(component.dado()).toBeTruthy();
-  });
+//   // 3️ Evaluar si el textarea contiene la frase "Resultado de aprendizaje"
+//   it('debería coincidir con la frase "Resultado de aprendizaje" en el textarea', () => {
+//     component.textoArea = 'Este es el Resultado de aprendizaje esperado';
+//     fixture.detectChanges();
+//     const textareaElement = fixture.nativeElement.querySelector('textarea');
+//     expect(textareaElement.value).toMatch(/Resultado de aprendizaje/);
+//   });
 
-  // 5️ Evaluar si el input de tipo texto contiene "Angular Testing"
-  it('debería contener "Angular Testing" en el input de texto', () => {
-    component.textoInput = 'Angular Testing';
-    fixture.detectChanges();
-    const inputElement = fixture.nativeElement.querySelector('input[type="text"]');
-    expect(inputElement.value).toContain('Angular Testing');
-  });
+//   // 4️ Evaluar si la función "dado()" retorna true cuando genera un número impar
+//   it('debería retornar true si el número es impar', () => {
+//     spyOn(Math, 'random').and.returnValue(0.3); // Simula un 1 (impar)
+//     expect(component.dado()).toBeTruthy();
+//   });
 
-});
+//   // 5️ Evaluar si el input de tipo texto contiene "Angular Testing"
+//   it('debería contener "Angular Testing" en el input de texto', () => {
+//     component.textoInput = 'Angular Testing';
+//     fixture.detectChanges();
+//     const inputElement = fixture.nativeElement.querySelector('input[type="text"]');
+//     expect(inputElement.value).toContain('Angular Testing');
+//   });
+
+// });
