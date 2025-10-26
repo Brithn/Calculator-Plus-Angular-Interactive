@@ -65,10 +65,4 @@ ng test
 ```
 
 ## 👥 Autor
-[Tu Nombre]
-
-## 📄 Licencia
-Este proyecto está bajo la Licencia MIT - mira el archivo [LICENSE.md](LICENSE.md) para detalles
-
----
-⌨️ con ❤️ por [Tu Nombre]
+Brithney Salazar
